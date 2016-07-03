@@ -1,0 +1,15 @@
+<h1>Register a New Candidate</h1>
+
+<%= form_for @candidate do |f| %>
+<%= f.label :first_name%>
+<%= f.text_field :first_name%>
+<%= f.label :last_name%>
+<%= f.text_field :last_name%>
+<%= f.label :jurisdiction%>
+<%= f.text_field :jurisdiction%>
+<%= f.label :party%>
+<%= f.text_field :party%>
+<%= f.label :incumbent%>
+<%= f.check_box :incumbent%>
+<%= f.submit %>
+<% end %>

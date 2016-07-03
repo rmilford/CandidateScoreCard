@@ -1,0 +1,10 @@
+<%= link_to "Add A New Candidate", new_candidate_path %>
+
+<ul>
+  <% @candidates.each do |candidate| %>
+  <li>
+    <%= link_to candidate.first_name, candidate_path(candidate) %>
+
+  </li>
+  <% end %>
+</ul>

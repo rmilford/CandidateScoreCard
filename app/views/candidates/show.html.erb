@@ -1,0 +1,14 @@
+<h2><%= @candidate.first_name %>
+<%= @candidate.last_name %>
+</h2>
+<h3><%= @candidate.party %></h3>
+<h4>
+<%= @candidate.jurisdiction %>
+</h4>
+<p>
+  This candidate is
+  <%= "not" unless @candidate.incumbent %>
+  an incumbent.
+</p>
+
+<%= link_to "Delete Candidate", candidate_path(@candidate), method: :delete %>
