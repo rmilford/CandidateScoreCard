@@ -10,5 +10,29 @@
   <%= "not" unless @candidate.incumbent %>
   an incumbent.
 </p>
+<h3>Issue Profile</h3>
+<ul>
+  <% @candidate.issues.each do |issue| %>
+    <li><%= "Election Cycle: #{issue.election_cycle}" %></li>
+    <li><%= "Immigration: #{issue.immigration}" %></li>
+    <li><%= "Net Neutrality: #{issue.net_neutrality}" %></li>
+    <li><%= "Climate Change: #{issue.climate_change}" %></li>
+    <li><%= "Gun Control:  #{issue.gun_control}" %></li>
+    <li><%= "Intellectual Property: #{issue.intellectual_property}" %></li>
+    <li><%= "Marijuana #{issue.marijuana}" %></li>
+  <% end %>
+  <% if @candidate.issues.size ==0 %>
+    <li><%= "No Issue Profile on Record" %></li>
+  <% end %>
+</ul>
 
-<%= link_to "Delete Candidate", candidate_path(@candidate), method: :delete %>
+<p> <%= link_to "Edit Candidate", edit_candidate_path(@candidate) %> |
+  <% if @candidate.issues.size ==0 %>
+    <%= link_to "Add Issue Profile", new_issue_path(@candidate) %>
+  <% else %>
+    <%= link_to "Edit Issue Profile", edit_issue_path(@candidate) %>
+  <% end %>
+ </p>
+
+<%= link_to "View Other Candidates", candidates_path %> |
+<%= link_to "Delete Candidate", candidate_path(@candidate), method: :delete %> |

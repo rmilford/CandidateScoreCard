@@ -3,7 +3,7 @@
 <ul>
   <% @candidates.each do |candidate| %>
   <li>
-    <%= link_to candidate.first_name, candidate_path(candidate) %>
+    <%= link_to "#{candidate.first_name} #{candidate.last_name}", candidate_path(candidate) %>
 
   </li>
   <% end %>

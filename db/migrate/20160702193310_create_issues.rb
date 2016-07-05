@@ -8,7 +8,7 @@ class CreateIssues < ActiveRecord::Migration
       t.string :intellectual_property
       t.string :marijuana
       t.integer :election_cycle
-      t.references :candidate, index: true, foreign_key: true
+      t.references :candidate_id, index: true, foreign_key: true
     end
   end
 end

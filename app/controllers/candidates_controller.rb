@@ -3,9 +3,11 @@ class CandidatesController < ApplicationController
   def index
     @candidates = Candidate.all
   end
+
   def show
     @candidate = Candidate.find(params[:id])
   end
+
   def new
     @candidate = Candidate.new
   end
@@ -13,12 +15,21 @@ class CandidatesController < ApplicationController
     @candidate = Candidate.create(candidate_params)
     redirect_to @candidate
   end
+
   def destroy
     @candidate = Candidate.find(params[:id])
     @candidate.destroy
-    redirect_to candidate_path
-
+    redirect_to candidates_path
   end
+  def edit
+    @candidate = Candidate.find(params[:id])
+  end
+  def update
+    @candidate = Candidate.find(params[:id])
+    @candidate.update(candidate_params)
+    redirect_to @candidate
+  end
+
   private
   def candidate_params
     params.require(:candidate).permit(:first_name, :last_name, :party, :jurisdiction, :incumbent)
