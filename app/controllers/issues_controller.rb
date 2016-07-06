@@ -1,18 +1,19 @@
 class IssuesController < ApplicationController
   def index
-    redirect_to candidates_path
+  @candidate = Candidate.find(params[:candidate_id])
   end
 
   # new
   def new
+    @candidate = Candidate.find(params[:candidate_id])
     @issue = Issue.new
   end
 
   # create
   def create
-    puts params
-    @issue = Issue.create(issue_params)
-    redirect_to candidate_path(Candidate.find(issue_params[:candidate_id]))
+    @candidate = Candidate.find(params[:candidate_id])
+    @issue = @candidate.issues.create(issue_params)
+    redirect_to candidate_path(@candidate)
   end
 
   #show

@@ -1,11 +1,17 @@
-Hello!
+
+<p>
+  candidates_path: <%=candidates_path%>
+  </p>
+  candidate_path: <%=candidate_path(@candidate)%>
+  <p>
+    candidate_issues_path: <%=candidate_issues_path(@candidate)%>
+    </p>
 
 <ul>
-  <% @issues.each do |issue| %>
+  <% @candidate.issues.each do |issue| %>
   <li>
     <%= issue.immigration %>
 
   </li>
   <% end %>
 </ul>
--->

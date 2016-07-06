@@ -1,10 +1,13 @@
-<%= button_to "Add A New Candidate", new_candidate_path, :method => :get %>
 
+<h1 class="name">Candidate Score</h1>
+
+<%= image_tag "politics.jpg", :class => "politics_images" %>
+
+<%= button_to "Add A New Candidate", new_candidate_path, :method => :get %>
 <ul>
   <% @candidates.each do |candidate| %>
   <li>
     <%= link_to "#{candidate.first_name} #{candidate.last_name}", candidate_path(candidate) %>
-
   </li>
   <% end %>
 </ul>
