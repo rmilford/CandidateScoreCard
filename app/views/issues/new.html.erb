@@ -1,3 +1,4 @@
 Add Candidate Issue Profile
-<% @candidate = Candidate.find(params[:format]) %>
+<!-- <%= debug params %> -->
+<%= @candidate = Candidate.find(params[:format]) %>
 <%= render "form" %>

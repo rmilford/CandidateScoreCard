@@ -10,6 +10,7 @@ class IssuesController < ApplicationController
 
   # create
   def create
+    puts params
     @issue = Issue.create(issue_params)
     redirect_to candidate_path(Candidate.find(issue_params[:candidate_id]))
   end
