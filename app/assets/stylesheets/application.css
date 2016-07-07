@@ -16,20 +16,30 @@
 li {
     list-style-type: none;
 }
+ul {
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+}
  * {
 
    text-align: center;
    background-color: white;
    color: #4cb3d4;
    font-family: 'Roboto', sans-serif;
-   font-size: 25px;
+   font-size: 15px;
  }
 .politics_images {
   height: 200px;
 }
 .name {
-
+  text-align: center;
 }
 .issue_form {
 
+}
+p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }

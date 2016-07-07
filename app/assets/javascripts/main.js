@@ -3,9 +3,8 @@ $(document).ready(function(){
 
 // https://congress.api.sunlightfoundation.com/legislators/locate?zip=20852&apikey=c2f229def1234e12b28bd12bfbd624f2
 var url = 'https://congress.api.sunlightfoundation.com/legislators?state=';
-var apiKey = '&apikey=';
+var apiKey = '&apikey=c2f229def1234e12b28bd12bfbd624f2';
 console.log(state)
-
 $("button").click(function(){
   // var search = $('.destination').val();
   // var search = "NJ"

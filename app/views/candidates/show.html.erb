@@ -26,13 +26,14 @@
   <% end %>
 </ul>
 
-<p> <%= button_to "Edit Candidate", edit_candidate_path(@candidate), :method => :get %>
+<p> <ul><%= button_to "Edit Candidate", edit_candidate_path(@candidate), :method => :get %></ul>
   <% if @candidate.issues.size ==0 %>
-    <%= button_to "Add Issue Profile", new_candidate_issue_path(@candidate), :method => :get %>
+  <ul>  <%= button_to "Add Issue Profile", new_candidate_issue_path(@candidate), :method => :get %></ul>
   <% else %>
-    <%= button_to "View Issue Profile", candidate_issues_path(@candidate), :method => :get %>
+  <ul>  <%= button_to "View Issue Profile", candidate_issues_path(@candidate), :method => :get %></ul>
   <% end %>
- </p>
 
-<%= button_to "View Other Candidates", candidates_path, :method => :get %>
-<%= button_to "Delete Candidate", candidate_path(@candidate), :method => :delete %>
+
+<ul><%= button_to "View Other Candidates", candidates_path, :method => :get %></ul>
+<ul><%= button_to "Delete Candidate", candidate_path(@candidate), :method => :delete %></ul>
+</p>
