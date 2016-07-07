@@ -1,7 +1,8 @@
 class CandidatesController < ApplicationController
-
   def index
+    # @client = Congress::Client.new(ENV["CONGRESS_SECRET_KEY"])
     @candidates = Candidate.all
+
   end
 
   def show
