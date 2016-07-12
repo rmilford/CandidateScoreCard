@@ -5,7 +5,7 @@ $(document).ready(function(){
 var url = 'https://congress.api.sunlightfoundation.com/legislators?state=';
 var rails_env = '<%= Figaro.env.sunlight_apikey %>';
 var apiKey = '&apikey=' + rails_env;
-console.log(state)
+$('#my_img').hide();     
 $("button").click(function(){
   // var search = $('.destination').val();
   // var search = "NJ"
@@ -31,6 +31,10 @@ $("button").click(function(){
        $('#candidate_jurisdiction').val(response.results[i].state+' District '+response.results[i].district);
        $('#candidate_party').val(response.results[i].party);
        $('#candidate_incumbent').prop('checked', true);
+       $('#candidate_photo_url').val('https://theunitedstates.io/images/congress/225x275/' +response.results[i].bioguide_id+'.jpg');
+       $('#candidate_bioguide_id').val(response.results[i].bioguide_id);
+       $('#my_img').show();
+       $('#my_img').attr('src', 'https://theunitedstates.io/images/congress/225x275/' +response.results[i].bioguide_id+'.jpg');
 
      });
 

@@ -1,6 +1,7 @@
 <h2><%= @candidate.first_name %>
 <%= @candidate.last_name %>
 </h2>
+<%= "<img src='#{@candidate.photo_url}' alt='Candidate Photo' height='275' width='225'>" unless @candidate.photo_url %>
 <h3><%= @candidate.party %></h3>
 <h4>
 <%= @candidate.jurisdiction %>

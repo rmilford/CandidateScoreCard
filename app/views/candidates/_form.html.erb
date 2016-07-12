@@ -7,7 +7,11 @@
 <ul><%= f.text_field :jurisdiction%></ul>
 <ul><%= f.label :party%></ul>
 <ul><%= f.text_field :party%></ul>
-<ul><%= f.label :incumbent%></ul>
+<ul><%= f.label :photo_url, style: 'display:none' %></ul>
+<ul><%= f.text_field :photo_url, style: 'display:none' %></ul>
+<ul><%= f.label :bioguide_id, style: 'display:none' %></ul>
+<ul><%= f.text_field :bioguide_id, style: 'display:none' %></ul>
+<ul><%= f.label :incumbent %></ul>
 <ul><%= f.check_box :incumbent%></ul>
 <ul><%= f.submit %></ul>
 <% end %>
